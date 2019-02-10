@@ -35,11 +35,20 @@
 
 		.engine {
 			position: absolute;
-			z-index: 9999;
+			z-index: 998;
 			width: 100%;
-			height: 216px;
+			
 			bottom: 0px;
 			text-align: center;
+		}
+		.banner{position: absolute;
+			z-index: 998;
+			width: 100%;
+			color:rgb(206, 206, 206);
+			font-size: 80px;
+			bottom: 50%;
+			text-align: center;
+
 		}
 	</style>
 	<script> 
@@ -48,7 +57,8 @@
             if(state==0){
                 document.getElementById("ddsound").load();
 				//document.getElementById("ddsound").play();
-                state=1;
+				state=1;
+				document.getElementById("banner").style.display="none";
             }
         }, false);
 	</script> 
@@ -58,6 +68,14 @@
 <body>
     <audio id='ddsound' src='bang.mp3'   align='center' border='0' width='1' height='1' loop='false'></audio>
 	<canvas id="c"></canvas>
+	<div id="banner" class="banner">
+		<p>流浪地球计划</p>
+		<p>苏拉威西3号行星发动机</p>
+		<p>春节十二响</p>
+		<p></p>
+		<p></p>
+		<p>猛击我开始</p>
+	</div>
 	<div class="engine">
 		<img src="engine.png" style="cursor: pointer;"/>
 	</div>
@@ -79,6 +97,11 @@
 				var Pswitch = 0;
 				var bang=600;
 				var stopbang=3800;
+				setTimeout(function () 
+				{
+					document.getElementById("banner").style.display="none";
+				}, 4000);
+
 				soundplay.loop=false;
 				setTimeout(function () {
 					Pswitch = 1;
@@ -167,7 +190,7 @@
 				}, bang);
 				}, stopbang);
 				}, bang);
-				}, 5000);
+				}, 8000);
 			
 				
 
