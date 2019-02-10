@@ -47,7 +47,7 @@
         document.addEventListener('touchstart', function(){
             if(state==0){
                 document.getElementById("ddsound").load();
-				document.getElementById("ddsound").play();
+				//document.getElementById("ddsound").play();
                 state=1;
             }
         }, false);
@@ -78,7 +78,7 @@
 				var alphaswitch = Math.random();
 				var Pswitch = 0;
 				var bang=600;
-				var stopbang=3600;
+				var stopbang=3800;
 				document.getElementById("ddsound").loop=false;
 				setTimeout(function () {
 					Pswitch = 1;
